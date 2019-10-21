@@ -6,8 +6,8 @@ DEF_INTERFACE="stlink"
 DEF_TARGET="stm32h7x"
 
 read_config() {
-	if [ -f ./${CONFIG} ]; then
-		source ./${CONFIG}
+	if [ -f ${SCRIPTPATH}/${CONFIG} ]; then
+		source ${SCRIPTPATH}/${CONFIG}
 		echo "Read ${CONFIG}"
 	else
 		echo "Info: ${CONFIG} file does not exist"

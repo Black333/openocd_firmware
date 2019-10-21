@@ -3,7 +3,10 @@
 OFFSET=""
 FILENAME=""
 
-source ./common.sh
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+
+source ${SCRIPTPATH}/common.sh
 
 app_help()
 {
